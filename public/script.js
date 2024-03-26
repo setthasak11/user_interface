@@ -3,14 +3,14 @@ var InitialCount = -1;
 
 
 const deleteProducts = async() => {
-    url = 'https://databasests.netlify.app/product';
+    url = 'https://energetic-puce-walrus.cyclic.app/product';
 
     let res = await axios.get(url);
     responseText = res.data;
     const products = responseText;
 
     for (let product of products) {
-        const response = await axios.delete(`https://databasests.netlify.app/product/${product.id}`)
+        const response = await axios.delete(`https://energetic-puce-walrus.cyclic.app/product/${product.id}`)
 
     }
     location.reload();
@@ -22,7 +22,7 @@ const deleteProducts = async() => {
 }
 
 const loadProducts = async() => {
-    url = 'https://databasests.netlify.app/product';
+    url = 'https://energetic-puce-walrus.cyclic.app/product';
 
     let res = await axios.get(url);
     responseText = await res.data;
@@ -45,23 +45,23 @@ const loadProducts = async() => {
         const x = `
         <section>
                 <div class="card card-long animated fadeInUp once">
-                    <img src="asset/img/${product.id}.jpg" class="album">
+                    <img src="asset/img/1${product.id}.jpg" class="album">
                     <div class="span1">Product Name</div>
                     <div class="card__product">
-                        <span>${product.name}</span>
+                        <span>Apple${product.name}</span>
                     </div>
                     <div class="span2">Price</div>
                     <div class="card__price">
-                        <span>฿${product.price} </span>
+                        <span>฿20${product.price} </span>
                     </div>
                     <div class="span3">Units</div>
                     <div class="card__unit">
-                        <span>${product.taken} ${product.unit}</span>
+                        <span>2${product.taken} ${product.unit}</span>
                     </div>
 
                     <div class="span4">Payable</div>
                     <div class="card__amount">
-                        <span>฿${product.payable}</span>
+                        <span>฿40${product.payable}</span>
                     </div>
                 </div>
             </section>
@@ -79,7 +79,7 @@ const loadProducts = async() => {
 var checkout = async() => {
     document.getElementById('2').innerHTML = "<span class='loader-16' style='margin-left: 44%;'></span>"
     var payable = 0;
-    url = 'https://databasests.netlify.app/product';
+    url = 'https://energetic-puce-walrus.cyclic.app/product';
 
     let res = await axios.get(url);
     responseText = await res.data;

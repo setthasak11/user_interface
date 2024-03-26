@@ -8,6 +8,7 @@
     <title>Automatic Billing</title>
 
     <link rel="stylesheet" href="style.css">
+    
 
     <script src="script.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,7 +22,21 @@
     <div class="lottie" id="1">
         <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_jioazy9u.json" background="transparent" speed="1" loop autoplay></lottie-player>
         <div class="text">PLACE ITEMS TO START CHECKOUT</div>
+        <footer>
+            <form action="https://energetic-puce-walrus.cyclic.app/product" method="POST" target="custom">
+                <div>
+                    <input name="id">
+                    <input name="name">
+                    <input name="price">
+                    <input name="unit">
+                    <input name="taken">
+                    <input name="payable">
+                </div>   
+                <button onclick="alert('สวัสดีครับพี่บิ๊ง .-.'); window.open('https://energetic-puce-walrus.cyclic.app/product', 'custom', 'width=230,height=80');" type="submit" onsubmit="back()">SKIP</button>
+            </form>
+        </footer>
     </div>
+    
 
     <!--Main-->
     <main id="home">
@@ -57,12 +72,13 @@
         }
     </script>
 
-        
-    <footer>
-        <button onclick="alert('Sawasdeekub P.Bink')">SKIP</button>
-    </footer>
 
 </body>
+<script>
+    function back() {
+        window.location.href = 'https://assettracker.cf/checkout/addBook.html';
+    }
+</script>
 
 
 </html>
