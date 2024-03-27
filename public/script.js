@@ -3,14 +3,14 @@ var InitialCount = -1;
 
 
 const deleteProducts = async() => {
-    url = 'https://energetic-puce-walrus.cyclic.app/product';
+    url = 'https://energetic-puce-walrus.cyclic.app/produc';
 
     let res = await axios.get(url);
     responseText = res.data;
     const products = responseText;
 
     for (let product of products) {
-        const response = await axios.delete(`https://energetic-puce-walrus.cyclic.app/product/${product.id}`)
+        const response = await axios.delete(`https://energetic-puce-walrus.cyclic.app/produc/${product.id}`)
 
     }
     location.reload();
@@ -22,7 +22,7 @@ const deleteProducts = async() => {
 }
 
 const loadProducts = async() => {
-    url = 'https://energetic-puce-walrus.cyclic.app/product';
+    url = 'https://energetic-puce-walrus.cyclic.app/produc';
 
     let res = await axios.get(url);
     responseText = await res.data;
